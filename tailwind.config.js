@@ -5,13 +5,14 @@ module.exports = {
     extend: {
       fontSize: {
         mini: ["10px", "12px"],
+        first_letter: ["75px", "100px"],
         headers: ["50px", "60px"],
         breads: ["16px", "20px"],
         links: ["25px", "30px"],
       },
 
       colors: {
-        bg_blue: "#EAF9FF",
+        blue: "#DBF2FF",
         box_green: "#B6CA3F",
         box_red: "#FF4125",
         box_purple: "#62236C",

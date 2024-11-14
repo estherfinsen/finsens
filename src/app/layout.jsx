@@ -2,8 +2,20 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Roboto } from "next/font/google";
+import { Ballet } from "next/font/google";
 
-const myFont = localFont({ src: "./fonts/aria_black.woff2" });
+const ballet = Ballet({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  weight: ["400", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -13,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={bg_blue}>
+      <body className={`${roboto.className} bg-blue`}>
         <header>
           <Navbar />
         </header>

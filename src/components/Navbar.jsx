@@ -1,6 +1,9 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import React from "react";
+import Link from "next/link";
+import Logo from "./Logo";
+import { Slant as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -10,7 +13,7 @@ const Navbar = () => {
     <div className="w-full h-20 sticky top-0 pt-16 text-links">
       <div className="container mx-auto px-4 h-full">
         <div className="flex justify-between items-center h-full">
-          <Logo />
+          <Logo className="" />
           <div className="z-10">
             <Hamburger toggled={isOpen} toggle={setOpen} color="#FFF" size={48} />
           </div>
@@ -72,7 +75,6 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      <Lines className="pt-10" />
     </div>
   );
 };

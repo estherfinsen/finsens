@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        mini: ["10px", "12px"],
-        first_letter: ["75px", "100px"],
-        headers: ["50px", "60px"],
-        breads: ["16px", "20px"],
-        links: ["25px", "30px"],
+        mini: ["10px", "10px"],
+        first_letter: ["75px", "75px"],
+        headers: ["50px", "50px"],
+        breads: ["16px", "16px"],
+        links: ["25px", "25x"],
       },
 
       colors: {

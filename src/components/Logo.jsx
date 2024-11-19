@@ -6,8 +6,8 @@ import React from "react";
 export default function Logo() {
   return (
     <>
-      <Link className="max-h-1" href="/">
-        <Image src={logo_finsens} alt="Logo" className="relative w-8/12" />
+      <Link href="/" className="block">
+        <Image src={logo_finsens} alt="Logo" width={100} height={50} className="w-auto h-auto max-w-[100px]" priority={true} />
       </Link>
     </>
   );

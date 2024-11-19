@@ -18,7 +18,7 @@ const Navbar = () => {
             <Hamburger toggled={isOpen} toggle={setOpen} color={isOpen ? "#DBF2FF" : "#FF4125"} size={48} />
           </div>
           {isOpen && (
-            <div className="fixed right-0 w-full h-full bg-box_red">
+            <div className="fixed top-0 right-0 w-full h-screen bg-box_red">
               <ul className="fixed inset-0 flex flex-col justify-center items-center text-blue uppercase">
                 <li
                   onClick={() => {

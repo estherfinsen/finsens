@@ -1,11 +1,9 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import Logo from "./Logo";
 
 const Footer = () => {
   return (
-    <div className="grid grid-cols-3 items-center py-12 px-20 bg-box_purple">
+    <div className="grid grid-cols-2 items-center py-12 px-20 bg-box_purple">
       <ul className="flex flex-col justify-center items-start text-blue uppercase gap-y-3">
         <li>
           <Link className="hover:underline" href="https://www.facebook.com/finsens.dk">
@@ -23,10 +21,6 @@ const Footer = () => {
           </Link>
         </li>
       </ul>
-
-      <div className="flex justify-center items-center">
-        <Logo />
-      </div>
 
       <ul className="flex flex-col justify-center items-end text-blue uppercase gap-y-3">
         <li>

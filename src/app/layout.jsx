@@ -1,17 +1,17 @@
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Roboto } from "next/font/google";
-import { Ballet } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 
-const ballet = Ballet({
-  weight: "400",
+const work_header = Work_Sans({
+  weight: ["900"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
+  display: "swap",
 });
 
-const roboto = Roboto({
-  weight: ["400", "900"],
+const work_bread = Work_Sans({
+  weight: ["900"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
@@ -25,11 +25,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} bg-blue`}>
+      <body className={`${work_header.className} bg-blue  w-full max-w-none`}>
         <header>
           <Navbar />
         </header>
-        <main className="px-10 py-10 justify-center flex md:px-20">{children}</main>
+        <main className="justify-center flex px-2 py-10 md:px-7">{children}</main>
         <footer>
           <Footer />
         </footer>

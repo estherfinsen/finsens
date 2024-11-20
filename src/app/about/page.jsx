@@ -1,19 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import rasmus from "../imgs/rasmus.jpg";
-import { Ballet } from "next/font/google";
-
-const ballet = Ballet({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 export default function about() {
   return (
     <section className="text-breads text-box_purple uppercase">
-      <div className=" w-9/12 pt-32 md:flex gap-3">
-        <h1 className={`${ballet.className} text-box_red text-first_letter`}>K</h1>
-        <h1 className=" text-box_green text-headers pt-3"> ontakt </h1>
+      <div className=" w-9/12 pt-32 md:flex gap-1">
+        <h1 className=" text-box_red text-headers pt-20">Kontakt </h1>
       </div>
       <div className="md:grid md:grid-cols-2 pt-5">
         <div className="md:col-start-1">

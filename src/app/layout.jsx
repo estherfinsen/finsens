@@ -11,7 +11,7 @@ const work_header = Work_Sans({
 });
 
 const work_bread = Work_Sans({
-  weight: ["900"],
+  weight: ["500"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
@@ -25,12 +25,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${work_header.className} bg-blue  w-full max-w-none`}>
-        <header>
+      <body className={`${work_bread.className} bg-blue m-0`}>
+        <header className="w-full p-2">
           <Navbar />
         </header>
-        <main className="justify-center flex px-2 py-10 md:px-7">{children}</main>
-        <footer>
+        <main className="w-full px-2 py-10 md:px-7 justify-center flex">{children}</main>
+        <footer className="w-full">
           <Footer />
         </footer>
       </body>

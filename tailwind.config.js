@@ -11,16 +11,19 @@ module.exports = {
         nav: ["230px", "230px"],
         footer: ["130px", "130px"],
       },
-      animation: {
-        "program-1": "program 20s linear infinite",
-        "program-2": "program 40s linear infinite",
-      },
-      keyframes: {
-        program: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-50%)" },
+      extend: {
+        animation: {
+          "program-2": "scroll 10s linear infinite",
+        },
+
+        keyframes: {
+          scroll: {
+            "0%": { transform: "translateX(100%)" },
+            "100%": { transform: "translateX(-100%)" },
+          },
         },
       },
+
       colors: {
         blue: "#e1f7ff",
         box_green: "#B6CA3F",

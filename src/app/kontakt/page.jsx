@@ -14,13 +14,13 @@ const work_header = Work_Sans({
 export default function kontakt() {
   return (
     <section className={`${work_header.className} text-box_red uppercase pt-28 text-headers relative`}>
-      <div className="program relative w-screen max-w-full overflow-hidden text-white">
-        <div className="track_2 absolute whitespace-nowrap will-change-transform animate-program-2">
+      <div className="relative w-screen max-w-full">
+        <div className="absolute whitespace-nowrap animate-program-2">
           <p className="text-running uppercase">kontakt kontakt kontakt kontakt kontakt kontakt</p>
         </div>
       </div>
 
-      <div className="md:grid md:grid-cols-2">
+      <div className="md:grid md:grid-cols-2 pt-20">
         <div className="md:col-start-1 z-10 relative flex flex-col items-start uppercase">
           <ul className="flex flex-col items-start uppercase gap-y-7">
             <li>
@@ -52,7 +52,6 @@ export default function kontakt() {
           </ul>
         </div>
 
-        {/* Image section */}
         <div className="md:col-start-2 relative">
           <Image src={rasmus} alt="foos" className="w-full h-full object-cover" />
         </div>

@@ -11,7 +11,7 @@ export default function Page() {
           <div className="relative w-full h-full">
             <Image src={rasmus} alt="grafik" layout="fill" objectFit="cover" className="w-full h-full" />
             <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 bg-box_green w-1/2 left-0 transition-opacity duration-500 ease-in-out">
-              <p className="text-box_red uppercase text-links">grafik</p>
+              <p className="text-box_red uppercase text-breads">grafik</p>
             </div>
           </div>
         </Link>
@@ -20,7 +20,7 @@ export default function Page() {
           <div className="relative w-full h-full">
             <Image src={rasmus} alt="scenografi" layout="fill" objectFit="cover" className="w-full h-full" />
             <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 bg-box_green w-1/2 left-0 transition-opacity duration-500 ease-in-out">
-              <p className="text-box_red uppercase text-links">scenografi</p>
+              <p className="text-box_red uppercase text-breads">scenografi</p>
             </div>
           </div>
         </Link>
@@ -29,7 +29,7 @@ export default function Page() {
           <div className="relative w-full h-full">
             <Image src={rasmus} alt="speak" layout="fill" objectFit="cover" className="w-full h-full" />
             <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 bg-box_green w-1/2 left-0 transition-opacity duration-500 ease-in-out">
-              <p className="text-box_red uppercase text-links">speak</p>
+              <p className="text-box_red uppercase text-breads">speak</p>
             </div>
           </div>
         </Link>

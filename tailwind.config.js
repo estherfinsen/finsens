@@ -7,8 +7,7 @@ module.exports = {
         mini: ["10px", "10px"],
         first_letter: ["150px", "150px"],
         headers: ["60px", "60px"],
-        breads: ["16px", "16px"],
-        links: ["25px", "25px"],
+        breads: ["25px", "25px"],
         nav: ["230px", "230px"],
       },
 

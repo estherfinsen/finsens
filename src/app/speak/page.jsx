@@ -9,7 +9,7 @@ export default async function Speak() {
     <section className="grid">
       <h1 className="text-box_red uppercase text-headers py-8 pt-16 ">Speak</h1>
       <div className=" justify-center">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-10 text-white uppercase text-breads md:text-links">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-10 text-white uppercase text-breads md:text-breads">
           {data.map((band) => {
             return <Card key={band.name} data={band} />;
           })}

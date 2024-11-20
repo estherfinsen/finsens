@@ -15,7 +15,7 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="h-20 sticky top-0 left-0 pt-16 text-links w-full z-50">
+    <div className="h-20 sticky top-0 left-0 pt-16 text-breads w-full z-50">
       <div className="px-4 h-full mx-auto max-w-screen-lg">
         <div className="flex justify-start items-center h-full">
           <Link href="/">

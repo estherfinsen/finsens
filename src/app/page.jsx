@@ -10,7 +10,7 @@ export default function Page() {
         <Link href="/grafik" className="relative group aspect-square">
           <div className="relative w-full h-full">
             <Image src={rasmus} alt="grafik" layout="fill" objectFit="cover" className="w-full h-full" />
-            <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 bg-box_green w-1/2 left-0 transition-opacity duration-500 ease-in-out">
+            <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 bg-blue border-solid border-4 border-r-0 border-box_red w-1/2 left-0 transition-opacity duration-500 ease-in-out">
               <p className="text-box_red uppercase text-breads">grafik</p>
             </div>
           </div>
@@ -19,7 +19,7 @@ export default function Page() {
         <Link href="/scenografi" className="relative group aspect-square">
           <div className="relative w-full h-full">
             <Image src={rasmus} alt="scenografi" layout="fill" objectFit="cover" className="w-full h-full" />
-            <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 bg-box_green w-1/2 left-0 transition-opacity duration-500 ease-in-out">
+            <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 bg-blue border-solid border-4 border-r-0 border-box_red w-1/2 left-0 transition-opacity duration-500 ease-in-out">
               <p className="text-box_red uppercase text-breads">scenografi</p>
             </div>
           </div>
@@ -28,7 +28,7 @@ export default function Page() {
         <Link href="/speak" className="relative group aspect-square">
           <div className="relative w-full h-full">
             <Image src={rasmus} alt="speak" layout="fill" objectFit="cover" className="w-full h-full" />
-            <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 bg-box_green w-1/2 left-0 transition-opacity duration-500 ease-in-out">
+            <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 bg-blue border-solid border-4 border-r-0 border-box_red w-1/2 left-0 transition-opacity duration-500 ease-in-out">
               <p className="text-box_red uppercase text-breads">speak</p>
             </div>
           </div>

@@ -33,7 +33,7 @@ const Navbar = () => {
                   }}
                 >
                   <Link href="/grafik">
-                    <p className="hover:underline">Grafik</p>
+                    <p className="hover:underline ">Grafik</p>
                   </Link>
                 </li>
 

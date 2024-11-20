@@ -1,13 +1,34 @@
-import React from "react";
-import Image from "next/image";
-import rasmus from "./imgs/rasmus.jpg";
-
-export default function page() {
+export default function Page() {
   return (
-    <section className="w-9/12 pt-32 md:flex gap-4 grid-cols-3">
-      <Image src={rasmus} alt="foos" className="w-10/12 col-span-1" />
-      <Image src={rasmus} alt="foos" className="w-10/12 col-span-2" />
-      <Image src={rasmus} alt="foos" className="w-10/12 col-span-3" />
+    <section className="relative w-full h-screen pt-24">
+      <div className="grid grid-cols-3 gap-4 w-full h-full z-10">
+        <Link href="/grafik" className="relative group aspect-square">
+          <div className="relative w-full h-full">
+            <Image src={rasmus} alt="grafik" layout="fill" objectFit="cover" className="w-full h-full" />
+            <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-box_green uppercase text-links">grafik</p>
+            </div>
+          </div>
+        </Link>
+
+        <Link href="/scenografi" className="relative group aspect-square">
+          <div className="relative w-full h-full">
+            <Image src={rasmus} alt="scenografi" layout="fill" objectFit="cover" className="w-full h-full" />
+            <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-box_green uppercase text-links">scenografi</p>
+            </div>
+          </div>
+        </Link>
+
+        <Link href="/speak" className="relative group aspect-square">
+          <div className="relative w-full h-full">
+            <Image src={rasmus} alt="speak" layout="fill" objectFit="cover" className="w-full h-full" />
+            <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-box_green uppercase text-links">speak</p>
+            </div>
+          </div>
+        </Link>
+      </div>
     </section>
   );
 }

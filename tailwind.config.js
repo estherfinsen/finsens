@@ -5,33 +5,40 @@ module.exports = {
     extend: {
       fontSize: {
         mini: ["10px", "10px"],
-        running: ["60px", "60px"],
+        running: ["20px", "20px"],
         headers: ["70px", "70px"],
         breads: ["25px", "25px"],
         nav: ["230px", "230px"],
         footer: ["130px", "130px"],
       },
-      extend: {
-        animation: {
-          "program-2": "scroll 10s linear infinite",
-        },
 
-        keyframes: {
-          scroll: {
-            "0%": { transform: "translateX(100%)" },
-            "100%": { transform: "translateX(-100%)" },
-          },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" },
         },
       },
-
-      colors: {
-        blue: "#e1f7ff",
-        box_green: "#B6CA3F",
-        box_red: "#FF4125",
-        box_purple: "#62236C",
-        textWhite: "#ffffff",
+      animation: {
+        "program-2": "scroll 7s linear infinite",
       },
     },
+
+    colors: {
+      blue: "#e1f7ff",
+      box_green: "#B6CA3F",
+      box_red: "#FF4125",
+      box_purple: "#62236C",
+      textWhite: "#ffffff",
+    },
   },
-  plugins: [],
+
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".word-spacing-custom": {
+          "word-spacing": "0.1em",
+        },
+      });
+    },
+  ],
 };

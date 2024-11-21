@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <header className="w-full p-2">
           <Navbar />
         </header>
-        <main className="w-full px-2 py-20 md:px-7 justify-center flex">{children}</main>
+        <main className="w-full px-4 py-20 md:px-7 justify-center flex">{children}</main>
         <footer className="w-full">
           <Footer />
         </footer>

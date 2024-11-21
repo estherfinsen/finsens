@@ -18,15 +18,15 @@ export default function kontakt() {
         <div className="absolute top-0 left-0 w-full h-[2px] bg-box_red"></div>
 
         <div className="relative flex animate-program-2 w-screen">
-          <p className="text-running uppercase flex-shrink-0 tracking-widest word-spacing-custom">kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt</p>
+          <p className="text-running flex-shrink-0 tracking-widest word-spacing-custom">kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt</p>
         </div>
 
         <div className="absolute bottom-0 left-0 w-full h-[2px] bg-box_red"></div>
       </div>
 
       <div className="md:grid md:grid-cols-2 pt-20">
-        <div className="md:col-start-1 z-10 relative flex flex-col items-start uppercase">
-          <ul className="flex flex-col items-start uppercase gap-y-7">
+        <div className="md:col-start-1 z-10 relative flex flex-col items-start ">
+          <ul className="flex flex-col items-start  gap-y-7">
             <li>
               <Link className="hover:underline" href="https://www.facebook.com/finsens.dk">
                 <p>facebook</p>

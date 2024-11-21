@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontSize: {
         mini: ["10px", "10px"],
-        running: ["20px", "20px"],
+        running: ["25px", "25px"],
         headers: ["70px", "70px"],
         breads: ["25px", "25px"],
         nav: ["230px", "230px"],
@@ -36,7 +36,7 @@ module.exports = {
     function ({ addUtilities }) {
       addUtilities({
         ".word-spacing-custom": {
-          "word-spacing": "0.1em",
+          "word-spacing": "3.0em",
         },
       });
     },

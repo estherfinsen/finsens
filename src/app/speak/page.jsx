@@ -1,19 +1,23 @@
-import Card from "../../components/Card";
+import { Work_Sans } from "next/font/google";
+
+const work_header = Work_Sans({
+  weight: ["900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default async function Speak() {
-  const response = await fetch("https://mature-insidious-monitor.glitch.me/bands");
-  const data = await response.json();
-  console.log(data);
-
   return (
-    <section className="grid">
-      <h1 className="text-box_red uppercase text-headers py-8 pt-16 ">Speak</h1>
-      <div className=" justify-center">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-10 text-white uppercase text-breads md:text-breads">
-          {data.map((band) => {
-            return <Card key={band.name} data={band} />;
-          })}
+    <section className={`${work_header.className} text-red uppercase pt-12 text-headers relative`}>
+      <div className="relative overflow-hidden w-screen">
+        <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
+
+        <div className="relative flex animate-program-2 w-screen">
+          <p className="text-running flex-shrink-0 tracking-widest word-spacing-custom py-3">speak speak speak speak speak speak speak speak speak speak speak speak speak speak speak speak</p>
         </div>
+
+        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-red"></div>
       </div>
     </section>
   );

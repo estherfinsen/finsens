@@ -13,15 +13,15 @@ const work_header = Work_Sans({
 
 export default function kontakt() {
   return (
-    <section className={`${work_header.className} text-box_red uppercase pt-8 text-headers relative`}>
+    <section className={`${work_header.className} text-red uppercase pt-12 text-headers relative`}>
       <div className="relative overflow-hidden w-screen">
-        <div className="absolute top-0 left-0 w-full h-[2px] bg-box_red"></div>
+        <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
 
         <div className="relative flex animate-program-2 w-screen">
-          <p className="text-running flex-shrink-0 tracking-widest word-spacing-custom">kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt</p>
+          <p className="text-running flex-shrink-0 tracking-widest word-spacing-custom py-3">kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt kontakt</p>
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-box_red"></div>
+        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-red"></div>
       </div>
 
       <div className="md:grid md:grid-cols-2 pt-20">

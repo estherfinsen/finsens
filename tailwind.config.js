@@ -4,12 +4,14 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        mini: ["10px", "10px"],
-        running: ["25px", "25px"],
-        headers: ["70px", "70px"],
+        running: ["15px", "15px"],
         breads: ["25px", "25px"],
-        nav: ["230px", "230px"],
+        headers: ["70px", "70px"],
+        hover_scene: ["65px", "65px"],
+        hover_grafik: ["120px", "120px"],
+        hover_speak: ["135px", "130px"],
         footer: ["130px", "130px"],
+        nav: ["230px", "230px"],
       },
 
       keyframes: {
@@ -21,13 +23,18 @@ module.exports = {
       animation: {
         "program-2": "scroll 7s linear infinite",
       },
+
+      rotate: {
+        270: "270deg",
+      },
     },
 
     colors: {
-      blue: "#e1f7ff",
-      box_green: "#B6CA3F",
-      box_red: "#FF4125",
-      box_purple: "#62236C",
+      blue: "#E1F7FF",
+      black: "#000",
+      red: "#FF4125",
+      purple: "#62236C",
+      pink: "#FF6BBB",
       textWhite: "#ffffff",
     },
   },

@@ -2,37 +2,43 @@ import React from "react";
 import Image from "next/image";
 import rasmus from "./imgs/rasmus.jpg";
 import Link from "next/link";
+import { Work_Sans } from "next/font/google";
+
+const work_bread = Work_Sans({
+  weight: ["500"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function Page() {
   return (
-    <section className="relative w-full h-screen pt-24">
-      <div className="grid grid-cols-3 gap-4 w-full h-full z-10">
-        <Link href="/grafik" className="relative group aspect-square">
-          <div className="relative w-full h-full">
-            <Image src={rasmus} alt="grafik" layout="fill" objectFit="cover" className="w-full h-full" />
-            <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 bg-blue border-solid border-4 border-r-0 border-box_red w-1/2 left-0 transition-opacity duration-500 ease-in-out">
-              <p className="text-box_red uppercase text-breads">grafik</p>
-            </div>
-          </div>
-        </Link>
+    <section className="w-screen min-h-screen text-blue uppercase pt-24 text-headers relative snap-y snap-mandatory">
+      <div className="grid grid-cols-3 gap-4 w-full h-full px-7 snap-center">
+        {["grafik", "scenografi", "speak"].map((category) => (
+          <Link key={category} href={`/${category}`} className="relative group aspect-square overflow-hidden">
+            <div className="relative w-full h-full">
+              {/* Background Image */}
+              <Image src={rasmus} alt={category} layout="fill" objectFit="cover" className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-105" />
 
-        <Link href="/scenografi" className="relative group aspect-square">
-          <div className="relative w-full h-full">
-            <Image src={rasmus} alt="scenografi" layout="fill" objectFit="cover" className="w-full h-full" />
-            <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 bg-blue border-solid border-4 border-r-0 border-box_red w-1/2 left-0 transition-opacity duration-500 ease-in-out">
-              <p className="text-box_red uppercase text-breads">scenografi</p>
+              {/* Animated Text Overlay */}
+              <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 bg-red/60 transition-opacity duration-500">
+                <p className={`${work_bread.className} uppercase tracking-widest text-hover_${category}`}>{category}</p>
+                <div className="relative w-full overflow-hidden mt-3">
+                  <div className="flex animate-program-2 space-x-8">
+                    {Array(10)
+                      .fill(category)
+                      .map((word, i) => (
+                        <span key={i} className="text-blue uppercase tracking-widest whitespace-nowrap">
+                          {word}
+                        </span>
+                      ))}
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </Link>
-
-        <Link href="/speak" className="relative group aspect-square">
-          <div className="relative w-full h-full">
-            <Image src={rasmus} alt="speak" layout="fill" objectFit="cover" className="w-full h-full" />
-            <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 bg-blue border-solid border-4 border-r-0 border-box_red w-1/2 left-0 transition-opacity duration-500 ease-in-out">
-              <p className="text-box_red uppercase text-breads">speak</p>
-            </div>
-          </div>
-        </Link>
+          </Link>
+        ))}
       </div>
     </section>
   );

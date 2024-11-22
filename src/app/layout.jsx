@@ -25,11 +25,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${work_bread.className} bg-blue m-0`}>
+      <body className={`${work_header.className} bg-blue m-0 scroll-smooth`}>
         <header className="w-full p-2">
           <Navbar />
         </header>
-        <main className="w-full px-4 py-20 md:px-7 justify-center flex">{children}</main>
+        <main className="w-full py-20 justify-center flex">{children}</main>
         <footer className="w-full">
           <Footer />
         </footer>

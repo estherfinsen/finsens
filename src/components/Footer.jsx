@@ -11,7 +11,7 @@ const work_header = Work_Sans({
 
 const Footer = () => {
   return (
-    <div className="items-center  mt-16 pt-10 pb-10 px-10 bg-purple text-red uppercase">
+    <div className="items-center  mt-16 pt-10 pb-10 px-10 bg-red text-blue uppercase">
       <Link href="/" className="self-start">
         <p className={`${work_header.className} text-footer`}>Finsens</p>
       </Link>

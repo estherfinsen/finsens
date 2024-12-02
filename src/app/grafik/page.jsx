@@ -22,7 +22,7 @@ export default async function grafik() {
 
   return (
     <div className={`${work_header.className} text-red uppercase text-headers relative`}>
-      <div className="relative overflow-hidden w-screen v">
+      <div className="relative overflow-hidden w-screen">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
 
         <div className="relative flex animate-program-2 w-screen">
@@ -31,14 +31,28 @@ export default async function grafik() {
 
         <div className="absolute bottom-0 left-0 w-full h-[2px] bg-red"></div>
       </div>
-      <ul className="text-breads">
+
+      {/* Grid layout */}
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-screen-lg mx-auto">
         {data.map((item) => (
-          <li key={item.id}>
-            <a href={`/grafik/${item.slug}`}>
-              {item.name}
-              {dataGrafik.map((image) => {
-                return image.id === item.id && image.images[0].name === "cover" && <Image src={image.images[0].src} alt={image.images[0].alt || "Default alt text"} width={500} height={300} />;
-              })}
+          <li
+            key={item.id}
+            className="flex flex-col items-center w-full" // Sikrer ensartet bredde og centreret indhold
+          >
+            <a href={`/grafik/${item.slug}`} className="block w-[250px]">
+              {" "}
+              {/* Ens bredde på hele elementet */}
+              {/* Billedcontainer */}
+              <div className="relative w-full h-[250px] bg-gray-200 overflow-hidden mx-auto">
+                <Image
+                  src={dataGrafik.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].src || "/default-image.jpg"}
+                  alt={dataGrafik.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].alt || "Default alt text"}
+                  fill // Sikrer billedet fylder hele containeren
+                  className="object-cover"
+                />
+              </div>
+              {/* Tekst under billedet */}
+              <h3 className="mt-2 text-breads font-bold text-left">{item.name}</h3>
             </a>
           </li>
         ))}

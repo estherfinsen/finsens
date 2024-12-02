@@ -1,5 +1,4 @@
 import { Work_Sans } from "next/font/google";
-import Link from "next/link";
 import Image from "next/image";
 import dataGrafik from "../dataGrafik";
 
@@ -32,13 +31,15 @@ export default async function grafik() {
 
         <div className="absolute bottom-0 left-0 w-full h-[2px] bg-red"></div>
       </div>
-      <ul>
+      <ul className="text-breads">
         {data.map((item) => (
           <li key={item.id}>
-            <a href={`/grafik/${item.slug}`}>{item.name}</a>
-            {dataGrafik.map((image) => {
-              return image.id === item.id && image.images[0].name === "cover" && <Image src={image.images[0].src} alt={image.images[0].alt || "Default alt text"} width={500} height={300} />;
-            })}
+            <a href={`/grafik/${item.slug}`}>
+              {item.name}
+              {dataGrafik.map((image) => {
+                return image.id === item.id && image.images[0].name === "cover" && <Image src={image.images[0].src} alt={image.images[0].alt || "Default alt text"} width={500} height={300} />;
+              })}
+            </a>
           </li>
         ))}
       </ul>

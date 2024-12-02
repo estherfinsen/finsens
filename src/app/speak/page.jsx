@@ -1,4 +1,6 @@
 import { Work_Sans } from "next/font/google";
+import Image from "next/image";
+import dataSpeak from "../dataSpeak";
 
 const work_header = Work_Sans({
   weight: ["900"],
@@ -19,8 +21,8 @@ export default async function speak() {
   console.log(data);
 
   return (
-    <div className={`${work_header.className} text-red uppercase pt-12 text-headers relative`}>
-      <div className="relative overflow-hidden w-screen mb-20">
+    <div className={`${work_header.className} text-red uppercase text-headers relative`}>
+      <div className="relative overflow-hidden w-screen v">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
 
         <div className="relative flex animate-program-2 w-screen">
@@ -29,10 +31,15 @@ export default async function speak() {
 
         <div className="absolute bottom-0 left-0 w-full h-[2px] bg-red"></div>
       </div>
-      <ul>
+      <ul className="text-breads">
         {data.map((item) => (
           <li key={item.id}>
-            <a href={`/speak/${item.id}`}>{item.name}</a>
+            <a href={`/speak/${item.slug}`}>
+              {item.name}
+              {dataSpeak.map((image) => {
+                return image.id === item.id && image.images[0].name === "cover" && <Image className="bg-grey" src={image.images[0].src} alt={image.images[0].alt || "Default alt text"} width={500} height={300} />;
+              })}
+            </a>
           </li>
         ))}
       </ul>

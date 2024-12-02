@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Work_Sans } from "next/font/google";
 import dataGrafik from "@/app/dataGrafik";
 

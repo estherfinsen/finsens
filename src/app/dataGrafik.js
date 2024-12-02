@@ -59,25 +59,25 @@ export const dataGrafik = [
   {
     id: 9,
     images: [
-      { name: "cover", src: "/imgs/grafik/pigegarden_cover.jpg", alt: "Coverbillede for projekt 9" },
-      { name: "eks1", src: "/imgs/grafik/pigegarden_eks1.jpg", alt: "Eksempel 1 for projekt 9" },
-      { name: "eks2", src: "/imgs/grafik/pigegarden_eks2.jpg", alt: "Eksempel 2 for projekt 9" },
+      { name: "cover", src: "/imgs/grafik/pigegarden/pigegarden_cover.jpg", alt: "Coverbillede for projekt 9" },
+      { name: "eks1", src: "/imgs/grafik/pigegarden/pigegarden_eks1.jpg", alt: "Eksempel 1 for projekt 9" },
+      { name: "eks2", src: "/imgs/grafik/pigegarden/pigegarden_eks2.jpg", alt: "Eksempel 2 for projekt 9" },
     ],
   },
   {
-    id: "10",
+    id: 10,
     images: [
-      { name: "cover", src: "/imgs/grafik/revyen-i-helsingoer_cover.jpg", alt: "Coverbillede for projekt 10" },
-      { name: "eks1", src: "/imgs/grafik/revyen-i-helsingoer_eks1.jpg", alt: "Eksempel 1 for projekt 10" },
+      { name: "cover", src: "/imgs/grafik/revyen-i-helsingoer/revyen-i-helsingoer_cover.jpg", alt: "Coverbillede for projekt 10" },
+      { name: "eks1", src: "/imgs/grafik/revyen-i-helsingoer/revyen-i-helsingoer_eks1.jpg", alt: "Eksempel 1 for projekt 10" },
     ],
   },
   {
-    id: "11",
-    images: [{ name: "cover", src: "/imgs/grafik/skidefuld-af-historier_cover.jpg", alt: "Coverbillede for projekt 11" }],
+    id: 11,
+    images: [{ name: "cover", src: "/imgs/grafik/skidefuld-af-historier/skidefuld-af-historier_cover.jpg", alt: "Coverbillede for projekt 11" }],
   },
   {
-    id: "12",
-    images: [{ name: "cover", src: "/imgs/grafik/words_cover.jpg", alt: "Coverbillede for projekt 12" }],
+    id: 12,
+    images: [{ name: "cover", src: "/imgs/grafik/words/words_cover.jpg", alt: "Coverbillede for projekt 12" }],
   },
 ];
 export default dataGrafik;

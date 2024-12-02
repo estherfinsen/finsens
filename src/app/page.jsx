@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import rasmus from "./imgs/rasmus.jpg";
+
 import Link from "next/link";
 import { Work_Sans } from "next/font/google";
 
@@ -50,7 +50,7 @@ export default function Page() {
         {["grafik", "scenografi", "speak"].map((category) => (
           <Link key={category} href={`/${category}`} className="relative group aspect-square overflow-hidden">
             <div className="relative w-full h-full">
-              <Image src={rasmus} alt={category} layout="fill" objectFit="cover" className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-105 group-hover:opacity-80" />
+              <Image src={"/imgs/rasmus.jpg"} alt={category} layout="fill" objectFit="cover" className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-105 group-hover:opacity-80" />
 
               <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="relative w-full h-full">

@@ -1,6 +1,7 @@
 import { Work_Sans } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
+import dataGrafik from "../dataGrafik";
 
 const work_header = Work_Sans({
   weight: ["900"],
@@ -21,7 +22,7 @@ export default async function grafik() {
   console.log(data);
 
   return (
-    <div className={`${work_header.className} text-red uppercase pt-12 text-headers relative`}>
+    <div className={`${work_header.className} text-red uppercase text-headers relative`}>
       <div className="relative overflow-hidden w-screen v">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
 
@@ -34,7 +35,10 @@ export default async function grafik() {
       <ul>
         {data.map((item) => (
           <li key={item.id}>
-            <a href={`/grafik/${item.id}`}>{item.name}</a>
+            <a href={`/grafik/${item.slug}`}>{item.name}</a>
+            {dataGrafik.map((image) => {
+              return image.id === item.id && image.images[0].name === "cover" && <Image src={image.images[0].src} alt={image.images[0].alt || "Default alt text"} width={500} height={300} />;
+            })}
           </li>
         ))}
       </ul>

@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import rasmus from "../imgs/rasmus.jpg";
 import Link from "next/link";
 import { Work_Sans } from "next/font/google";
 
@@ -57,7 +56,7 @@ export default function kontakt() {
         </div>
 
         <div className="md:col-start-2 relative">
-          <Image src={rasmus} alt="foos" className="w-full h-full object-cover" />
+          <Image src={"/imgs/rasmus.jpg"} alt="foos" className="w-full h-full object-cover" />
         </div>
       </div>
     </section>

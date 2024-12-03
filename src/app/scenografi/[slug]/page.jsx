@@ -34,7 +34,7 @@ export default async function singleScenografi({ params }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-screen px-0 pt-20 work_bread">
-        <div className="md:col-start-1 md:row-start-1 relative w-full pb-[100%] bg-gray-200 overflow-hidden mt-3">
+        <div className="md:col-start-1 md:row-start-1 relative w-full pb-[100%]  overflow-hidden mt-3">
           <Image src={scenografi[0].images[0].src} alt={scenografi[0].images[0].alt || "Default alt text"} layout="fill" objectFit="cover" />
         </div>
 
@@ -44,7 +44,7 @@ export default async function singleScenografi({ params }) {
         </div>
 
         {scenografi[0].images.slice(1).map((image, i) => (
-          <div key={i} className="relative w-full pb-[100%] bg-gray-200 overflow-hidden">
+          <div key={i} className="relative w-full pb-[100%]  overflow-hidden">
             <Image src={image.src} alt={image.alt || `Image ${i + 1}`} layout="fill" objectFit="cover" />
           </div>
         ))}

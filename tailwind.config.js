@@ -20,10 +20,6 @@ module.exports = {
       animation: {
         "program-2": "scroll 7s linear infinite",
       },
-
-      rotate: {
-        270: "270deg",
-      },
     },
 
     colors: {

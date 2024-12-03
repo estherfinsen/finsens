@@ -37,8 +37,8 @@ export default async function grafik() {
           const alignClass = index % 3 === 0 ? "items-start" : index % 3 === 1 ? "items-center" : "items-end";
 
           return (
-            <li key={item.id} className={`flex ${alignClass} flex-col h-[400px] w-full`}>
-              <a href={`/grafik/${item.slug}`} className="block">
+            <li key={item.id} className={`flex ${alignClass} flex-col h-[400px] w-full `}>
+              <a href={`/grafik/${item.slug}`} className="block group-hover:opacity-80 transition-opacity duration-500">
                 <div className="relative w-[400px] h-[400px] bg-gray-200 overflow-hidden ">
                   <Image src={dataGrafik.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].src || "/default-image.jpg"} alt={dataGrafik.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].alt || "Default alt text"} fill className="object-cover" />
                 </div>

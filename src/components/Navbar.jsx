@@ -15,25 +15,25 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <nav className="flex relative justify-between ">
-      <Link href="/" className="">
-        <p className={`${work_header.className} uppercase text-red text-nav`}>Finsens</p>
+    <nav className="flex items-center gap-24 px-4 py-2">
+      <Link href="/" className="flex items-center">
+        <p className={`${work_header.className} uppercase text-nav text-red`}>Finsens</p>
       </Link>
 
-      <div className="">
-        <Hamburger toggled={isOpen} toggle={setOpen} color={isOpen ? "#DBF2FF" : "#FF4125"} size={64} />
+      <div className="flex items-end z-30 scale-x-[4] scale-y-[4.6] pt-0.5">
+        <Hamburger toggled={isOpen} toggle={setOpen} color={isOpen ? "#E1F7FF" : "#FF4125"} size={48} />
       </div>
 
       {isOpen && (
-        <div className="w-full h-screen bg-red z-20 absolute insert-0">
-          <ul className="flex flex-col justify-center items-center text-blue uppercase">
+        <div className="w-full h-screen bg-red z-20 absolute inset-0 flex justify-center items-center">
+          <ul className="flex flex-col justify-center items-center self-center text-blue uppercase gap-6">
             <li
               onClick={() => {
                 setOpen(false);
               }}
             >
               <Link href="/grafik">
-                <p className="hover:underline ">Grafik</p>
+                <p className="hover:underline text-2xl">Grafik</p>
               </Link>
             </li>
 
@@ -41,10 +41,9 @@ const Navbar = () => {
               onClick={() => {
                 setOpen(false);
               }}
-              className="pt-6"
             >
               <Link href="/scenografi">
-                <p className="hover:underline">Scenografi</p>
+                <p className="hover:underline text-2xl">Scenografi</p>
               </Link>
             </li>
 
@@ -52,10 +51,9 @@ const Navbar = () => {
               onClick={() => {
                 setOpen(false);
               }}
-              className="pt-6"
             >
               <Link href="/speak">
-                <p className="hover:underline">speak</p>
+                <p className="hover:underline text-2xl">Speak</p>
               </Link>
             </li>
 
@@ -63,10 +61,9 @@ const Navbar = () => {
               onClick={() => {
                 setOpen(false);
               }}
-              className="pt-6"
             >
               <Link href="/kontakt">
-                <p className="hover:underline">kontakt</p>
+                <p className="hover:underline text-2xl">Kontakt</p>
               </Link>
             </li>
           </ul>

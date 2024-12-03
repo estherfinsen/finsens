@@ -36,10 +36,10 @@ export default async function scenografi() {
           const alignClass = index % 3 === 0 ? "items-start" : index % 3 === 1 ? "items-center" : "items-end";
 
           return (
-            <li key={item.id} className={`flex ${alignClass} flex-col h-[400px] w-full`}>
-              <a href={`/scenografi/${item.slug}`} className="block">
-                <div className="relative w-[400px] h-[400px] bg-gray-200 overflow-hidden">
-                  <Image src={dataScenografi.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].src || "/default-image.jpg"} alt={dataScenografi.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].alt || "Default alt text"} fill className="object-cover" />
+            <li key={item.id} className={`group flex ${alignClass} flex-col h-[400px] w-full`}>
+              <a href={`/scenografi/${item.slug}`} className="block transition-opacity duration-500 group-hover:opacity-80">
+                <div className="relative w-[400px] h-[400px] bg-grey overflow-hidden">
+                  <Image src={dataScenografi.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].src || "/default-image.jpg"} alt={dataScenografi.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].alt || "Default alt text"} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
                 </div>
 
                 <p className="mt-2 text-breads font-bold text-left w-[300px]">{item.name}</p>

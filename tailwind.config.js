@@ -6,7 +6,7 @@ module.exports = {
       fontSize: {
         running: ["15px", "15px"],
         breads: ["25px", "25px"],
-        headers: ["70px", "70px"],
+        headers: ["65px", "65px"],
         footer: ["130px", "130px"],
         nav: ["230px", "230px"],
       },

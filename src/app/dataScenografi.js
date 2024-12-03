@@ -12,10 +12,10 @@ const dataScenografi = [
     images: [
       { name: "cover", src: "/imgs/scenografi/hvem-bestemmer/hvem-bestemmer_cover.jpg", alt: "Coverbillede for projekt 2" },
       { name: "eks1", src: "/imgs/scenografi/hvem-bestemmer/hvem-bestemmer_eks1.jpg", alt: "Eksempel 1 for projekt 2" },
-      { name: "eks2", src: "/imgs/scenografi/hvem-bestemmer/hvem-bestemmer_eks2.heic", alt: "Eksempel 2 for projekt 2" },
-      { name: "eks3", src: "/imgs/scenografi/hvem-bestemmer/hvem-bestemmer_eks3.heic", alt: "Eksempel 3 for projekt 2" },
-      { name: "eks4", src: "/imgs/scenografi/hvem-bestemmer/hvem-bestemmer_eks4.heic", alt: "Eksempel 4 for projekt 2" },
-      { name: "eks5", src: "/imgs/scenografi/hvem-bestemmer/hvem-bestemmer_eks5.heic", alt: "Eksempel 5 for projekt 2" },
+      { name: "eks2", src: "/imgs/scenografi/hvem-bestemmer/hvem-bestemmer_eks2.jpg", alt: "Eksempel 2 for projekt 2" },
+      { name: "eks3", src: "/imgs/scenografi/hvem-bestemmer/hvem-bestemmer_eks3.jpg", alt: "Eksempel 3 for projekt 2" },
+      { name: "eks4", src: "/imgs/scenografi/hvem-bestemmer/hvem-bestemmer_eks4.jpg", alt: "Eksempel 4 for projekt 2" },
+      { name: "eks5", src: "/imgs/scenografi/hvem-bestemmer/hvem-bestemmer_eks5.jpg", alt: "Eksempel 5 for projekt 2" },
     ],
   },
   {

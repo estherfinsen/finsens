@@ -22,25 +22,32 @@ export default async function singleScenografi({ params }) {
   const res = await response.json();
   const data = res[0];
   const scenografi = dataScenografi.filter((item) => item.id === data.id);
-  console.log(scenografi);
-  console.log(dataScenografi[0].id);
-  console.log(data.id);
 
   return (
     <section className={`${work_header.className} text-red uppercase pt-12 text-headers relative`}>
       <div className="relative overflow-hidden w-screen">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
-
         <div className="relative flex animate-program-2 w-screen">
           <p className="text-running flex-shrink-0 tracking-widest word-spacing-custom py-3">scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi</p>
         </div>
-
         <div className="absolute bottom-0 left-0 w-full h-[2px] bg-red"></div>
       </div>
-      <div>
-        {scenografi[0].images.map((image, i) => {
-          return <Image key={i} src={image.src} alt="" height={500} width={500} />;
-        })}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-screen px-0 pt-20 work_bread">
+        <div className="md:col-start-1 md:row-start-1 relative w-full pb-[100%] bg-gray-200 overflow-hidden mt-3">
+          <Image src={scenografi[0].images[0].src} alt={scenografi[0].images[0].alt || "Default alt text"} layout="fill" objectFit="cover" />
+        </div>
+
+        <div className="md:col-start-2 md:row-start-1 px-4 md:px-8 flex flex-col">
+          <h1>{data.name}</h1>
+          <p className="font-medium mt-4 text-breads">{data.description}</p>
+        </div>
+
+        {scenografi[0].images.slice(1).map((image, i) => (
+          <div key={i} className="relative w-full pb-[100%] bg-gray-200 overflow-hidden">
+            <Image src={image.src} alt={image.alt || `Image ${i + 1}`} layout="fill" objectFit="cover" />
+          </div>
+        ))}
       </div>
     </section>
   );

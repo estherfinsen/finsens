@@ -11,8 +11,6 @@ export const dataGrafik = [
       { name: "eks2", src: "/imgs/grafik/demensvenligt/demensvenligt_eks2.jpg", alt: "Eksempel 2 for projekt 2" },
       { name: "eks3", src: "/imgs/grafik/demensvenligt/demensvenligt_eks3.jpg", alt: "Eksempel 3 for projekt 2" },
       { name: "eks4", src: "/imgs/grafik/demensvenligt/demensvenligt_eks4.jpg", alt: "Eksempel 4 for projekt 2" },
-      { name: "eks5", src: "/imgs/grafik/demensvenligt/demensvenligt_eks5.jpg", alt: "Eksempel 5 for projekt 2" },
-      { name: "eks6", src: "/imgs/grafik/demensvenligt/demensvenligt_eks6.jpg", alt: "Eksempel 6 for projekt 2" },
     ],
   },
   {

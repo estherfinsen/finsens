@@ -32,26 +32,14 @@ export default async function grafik() {
         <div className="absolute bottom-0 left-0 w-full h-[2px] bg-red"></div>
       </div>
 
-      {/* Grid layout */}
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-screen-lg mx-auto">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-screen-lg mx-auto pt-10">
         {data.map((item) => (
-          <li
-            key={item.id}
-            className="flex flex-col items-center w-full" // Sikrer ensartet bredde og centreret indhold
-          >
+          <li key={item.id} className="flex flex-col items-center w-full">
             <a href={`/grafik/${item.slug}`} className="block w-[250px]">
-              {" "}
-              {/* Ens bredde på hele elementet */}
-              {/* Billedcontainer */}
               <div className="relative w-full h-[250px] bg-gray-200 overflow-hidden mx-auto">
-                <Image
-                  src={dataGrafik.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].src || "/default-image.jpg"}
-                  alt={dataGrafik.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].alt || "Default alt text"}
-                  fill // Sikrer billedet fylder hele containeren
-                  className="object-cover"
-                />
+                <Image src={dataGrafik.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].src || "/default-image.jpg"} alt={dataGrafik.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].alt || "Default alt text"} fill className="object-cover" />
               </div>
-              {/* Tekst under billedet */}
+
               <h3 className="mt-2 text-breads font-bold text-left">{item.name}</h3>
             </a>
           </li>

@@ -31,14 +31,15 @@ export default async function speak() {
 
         <div className="absolute bottom-0 left-0 w-full h-[2px] bg-red"></div>
       </div>
-      <ul className="text-breads">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-screen-lg mx-auto pt-10">
         {data.map((item) => (
-          <li key={item.id}>
-            <a href={`/speak/${item.slug}`}>
-              {item.name}
-              {dataSpeak.map((image) => {
-                return image.id === item.id && image.images[0].name === "cover" && <Image className="bg-grey" src={image.images[0].src} alt={image.images[0].alt || "Default alt text"} width={500} height={300} />;
-              })}
+          <li key={item.id} className="flex flex-col items-center w-full">
+            <a href={`/speak/${item.slug}`} className="block w-[250px]">
+              <div className="relative w-full h-[250px] bg-gray-200 overflow-hidden mx-auto bg-grey">
+                <Image src={dataSpeak.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].src || "/default-image.jpg"} alt={dataSpeak.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].alt || "Default alt text"} fill className="object-cover" />
+              </div>
+
+              <h3 className="mt-2 text-breads font-bold text-left">{item.name}</h3>
             </a>
           </li>
         ))}

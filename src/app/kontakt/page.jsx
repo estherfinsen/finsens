@@ -56,7 +56,7 @@ export default function kontakt() {
         </div>
 
         <div className="md:col-start-2 relative">
-          <Image src={"/imgs/rasmus.jpg"} alt="foos" className="w-full h-full object-cover" />
+          <Image src={"/imgs/rasmus.jpg"} alt="foos" width="500" height="500" className="w-full h-full object-cover" />
         </div>
       </div>
     </section>

@@ -24,8 +24,8 @@ module.exports = {
       },
 
       cursor: {
-        cursor1: "url(/cursor.cur), auto",
-        cursor2: "url(/cursor2.cur), auto",
+        cursor1: "url(imgs/cursor.cur), auto",
+        cursor2: "url(imgs/cursor2.cur), auto",
       },
     },
 

@@ -23,13 +23,10 @@ module.exports = {
         "program-2": "scroll 5s linear infinite",
       },
 
-      cursor:{
-
-  'cursor1': url("/imgs/cursor.svg"), auto,
-  'cursor2': url("/imgs/cursor2.svg"), auto,
-},
-
-      }
+      cursor: {
+        cursor1: "url(imgs/cursor.cur), auto",
+        cursor2: "url(imgs/cursor2.cur), auto",
+      },
     },
 
     colors: {

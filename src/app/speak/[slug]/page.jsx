@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { Work_Sans } from "next/font/google";
 import dataSpeak from "@/app/dataSpeak";
@@ -63,21 +62,6 @@ export default async function SingleSpeak({ params }) {
         <div className="md:col-start-2 md:row-start-1 px-4 md:px-8 flex flex-col">
           <h1>{data.name}</h1>
           <p className="font-medium mt-4 text-breads">{data.description}</p>
-        </div>
-
-        <div className="md:col-start-2 md:row-start-2 w-full">
-          {speak[0].sounds.map((sound, i) => (
-            <div key={i} className="flex items-center justify-between w-full pb-[100%] overflow-hidden mb-6">
-              <button onClick={() => handlePlayPause(i)} className="bg-blue-500 text-white p-2 rounded-full w-32">
-                {isPlaying[i] ? "Pause" : "Play"}
-              </button>
-
-              <div className="flex flex-1 justify-center items-center w-full">
-                <audio ref={(el) => (audioRefs.current[i] = el)} src={sound.src} onTimeUpdate={(e) => handleTimeUpdate(i, e)} className="w-full" />
-                <progress value={progress[i]} max="100" className="w-full h-2 bg-gray-300 ml-4" />
-              </div>
-            </div>
-          ))}
         </div>
 
         {speak[0].images.slice(1).map((image, i) => (

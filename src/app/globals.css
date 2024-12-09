@@ -7,3 +7,10 @@
     text-wrap: balance;
   }
 }
+* {
+  cursor: url("/imgs/cursor.svg"), auto;
+}
+
+nav :hover {
+  cursor: url("/imgs/cursor2.svg"), auto;
+}

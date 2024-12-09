@@ -15,10 +15,11 @@ module.exports = {
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(-20%)" },
-          "100%": { transform: "translateX(80)" },
+          "100%": { transform: "translateX(200)" },
         },
       },
       animation: {
+        "program-1": "scroll 10s linear infinite",
         "program-2": "scroll 5s linear infinite",
       },
     },

@@ -18,7 +18,7 @@ export default function Page() {
         <div className="relative overflow-hidden w-full mb-8 py-0 bg-red hover:bg-blue hover:text-red hover:duration-500">
           <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
 
-          <div className="relative flex animate-program-2 w-screen">
+          <div className="relative flex animate-program-1 w-screen">
             <p className="text-running flex-shrink-0 tracking-widest word-spacing-custom py-3">grafik grafik grafik grafik grafik grafik grafik grafik grafik grafik grafik grafik grafik grafik grafik grafik grafik grafik</p>
           </div>
 
@@ -28,22 +28,26 @@ export default function Page() {
         <div className="relative overflow-hidden w-screen mb-8 py-0 bg-red hover:bg-blue hover:text-red hover:duration-500">
           <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
 
-          <div className="relative flex animate-program-2 w-screen">
+          <div className="relative flex animate-program-1 w-screen">
             <p className="text-running flex-shrink-0 tracking-widest word-spacing-custom py-3">scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi scenografi</p>
           </div>
 
           <div className="absolute bottom-0 left-0 w-full h-[2px] bg-red"></div>
         </div>
 
-        <div className="relative overflow-hidden w-screen mb-12 py-0 bg-red hover:bg-blue hover:text-red hover:duration-500">
+        <div className="relative overflow-hidden w-screen mb-20 py-0 bg-red hover:bg-blue hover:text-red hover:duration-500">
           <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
 
-          <div className="relative flex animate-program-2 w-screen">
+          <div className="relative flex animate-program-1 w-screen">
             <p className="text-running flex-shrink-0 tracking-widest word-spacing-custom py-3">speak speak speak speak speak speak speak speak speak speak speak speak speak speak speak speak speak speak speak speak speak</p>
           </div>
 
           <div className="absolute bottom-0 left-0 w-full h-[2px] bg-red"></div>
         </div>
+      </div>
+
+      <div>
+        <Image src={"/imgs/kronhjort/kronhjort_cover.jpg"} alt={"kronhjort"} width={500} height={300} className="w-full pb-20" />
       </div>
 
       <div className="grid grid-cols-3 gap-4 w-full h-full">
@@ -58,7 +62,7 @@ export default function Page() {
                     {Array(10)
                       .fill(category)
                       .map((word, i) => (
-                        <span key={i} className="text-red uppercase tracking-widest whitespace-nowrap border-y-2 border-red py-3 px-4 bg-blue word-spacing-custom">
+                        <span key={i} className="text-red uppercase tracking-widest whitespace-nowrap border-y-2 border-red py-2.5 px-4 bg-blue word-spacing-custom">
                           {word}
                         </span>
                       ))}

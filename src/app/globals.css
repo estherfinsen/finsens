@@ -7,10 +7,3 @@
     text-wrap: balance;
   }
 }
-* {
-  cursor: url("/imgs/cursor.cur"), auto;
-}
-
-nav :hover {
-  cursor: url("/imgs/cursor2.cur"), auto;
-}

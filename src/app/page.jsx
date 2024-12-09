@@ -46,7 +46,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 w-full h-full px-7 snap-center">
+      <div className="grid grid-cols-3 gap-4 w-full h-full">
         {["grafik", "scenografi", "speak"].map((category) => (
           <Link key={category} href={`/${category}`} className="relative group aspect-square overflow-hidden">
             <div className="relative w-full h-full">

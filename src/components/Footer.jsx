@@ -11,11 +11,14 @@ const work_header = Work_Sans({
 
 const Footer = () => {
   return (
-    <div className="items-center mt-16 pt-10 pb-10 bg-blue text-mocca uppercase">
-      <Link href="/" className="self-start">
+    <div className="items-center mt-16 pb-10 bg-blue text-mocca uppercase">
+      <div className="w-full h-3 bg-red mb-12"></div>
+      <div className="w-full h-3 bg-red mb-12"></div>
+      <div className="w-full h-3 bg-mocca mb-14"></div>
+      <Link href="/" className="self-start pr-{-2}">
         <p className={`${work_header.className} text-footer_head`}>Finsens</p>
       </Link>
-      <div className="grid grid-cols-2 pt-10">
+      <div className="grid grid-cols-2 pt-10 text-footer">
         <ul className="flex flex-col justify-center items-start gap-y-3">
           <li>
             <Link className="hover:underline" href="tel:22174765">

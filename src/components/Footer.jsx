@@ -11,9 +11,9 @@ const work_header = Work_Sans({
 
 const Footer = () => {
   return (
-    <div className="items-center  mt-16 pt-10 pb-10 px-10 bg-red text-blue uppercase">
+    <div className="items-center mt-16 pt-10 pb-10 bg-blue text-mocca uppercase">
       <Link href="/" className="self-start">
-        <p className={`${work_header.className} text-footer`}>Finsens</p>
+        <p className={`${work_header.className} text-footer_head`}>Finsens</p>
       </Link>
       <div className="grid grid-cols-2 pt-10">
         <ul className="flex flex-col justify-center items-start gap-y-3">

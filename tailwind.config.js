@@ -7,7 +7,8 @@ module.exports = {
         running: ["15px", "15px"],
         breads: ["25px", "25px"],
         headers: ["65px", "65px"],
-        footer: ["130px", "130px"],
+        footer_head: ["130px", "130px"],
+        footer: ["40px", "40px"],
         nav: ["230px", "230px"],
       },
 
@@ -24,11 +25,8 @@ module.exports = {
 
     colors: {
       blue: "#E1F7FF",
-      black: "#000",
       red: "#FF4125",
-      purple: "#62236C",
-      pink: "#FF6BBB",
-      textWhite: "#ffffff",
+      mocca: "#A57865",
       grey: "#D3D3D3",
     },
   },

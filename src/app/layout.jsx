@@ -25,8 +25,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${work_header.className} bg-blue m-0 cursor-[url(imgs/cursor.cur),_auto]`}>
-        <header className="w-full p-2">
+      <body className={`${work_header.className} bg-blue m-0`}>
+        <header className="w-full p-2 cursor-[url(cursor1.cur),_auto]">
           <Navbar />
         </header>
         <main className="w-full py-10 justify-center flex">{children}</main>

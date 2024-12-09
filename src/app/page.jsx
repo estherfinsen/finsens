@@ -13,8 +13,8 @@ const work_bread = Work_Sans({
 
 export default function Page() {
   return (
-    <section className="w-screen min-h-screen text-blue uppercase pt-2 text-running relative snap-y snap-mandatory flex flex-col">
-      <div className="snap-center">
+    <section className="w-screen min-h-screen text-blue uppercase pt-2 text-running relative flex flex-col word-spacing-custom">
+      <div>
         <div className="relative overflow-hidden w-full mb-8 py-0 bg-red hover:bg-blue hover:text-red hover:duration-500">
           <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
 
@@ -58,7 +58,7 @@ export default function Page() {
                     {Array(10)
                       .fill(category)
                       .map((word, i) => (
-                        <span key={i} className="text-red uppercase tracking-widest whitespace-nowrap border-y-2 border-red p-y-2 pt-6 bg-blue">
+                        <span key={i} className="text-red uppercase tracking-widest whitespace-nowrap border-y-2 border-red py-3 px-4 bg-blue word-spacing-custom">
                           {word}
                         </span>
                       ))}

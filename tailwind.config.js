@@ -14,12 +14,12 @@ module.exports = {
 
       keyframes: {
         scroll: {
-          "0%": { transform: "translateX(-50%)" },
-          "100%": { transform: "translateX(0)" },
+          "0%": { transform: "translateX(-20%)" },
+          "100%": { transform: "translateX(80)" },
         },
       },
       animation: {
-        "program-2": "scroll 7s linear infinite",
+        "program-2": "scroll 5s linear infinite",
       },
     },
 

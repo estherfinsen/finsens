@@ -25,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${work_header.className} bg-blue m-0 scroll-smooth`}>
+      <body className={`${work_header.className} bg-blue m-0 cursor-[url(imgs/cursor.cur),_auto]`}>
         <header className="w-full p-2">
           <Navbar />
         </header>

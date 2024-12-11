@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import { Work_Sans } from "next/font/google";
 import dataSpeak from "@/app/dataSpeak";
@@ -9,7 +10,7 @@ const work_header = Work_Sans({
   display: "swap",
 });
 
-export default async function SingleSpeak({ params }) {
+export default async function singleSpeak({ params }) {
   const { slug } = await params;
   const response = await fetch(`https://jhgcdsutaztszxtyehtm.supabase.co/rest/v1/speak?slug=eq.${slug}`, {
     method: "GET",
@@ -22,28 +23,6 @@ export default async function SingleSpeak({ params }) {
   const data = res[0];
   const speak = dataSpeak.filter((item) => item.id === data.id);
 
-  const [isPlaying, setIsPlaying] = useState(Array(dataSpeak[0].sounds.length).fill(false));
-  const [progress, setProgress] = useState(Array(dataSpeak[0].sounds.length).fill(0));
-  const audioRefs = useRef(Array(dataSpeak[0].sounds.length).fill(null));
-
-  const handlePlayPause = (index) => {
-    const newIsPlaying = [...isPlaying];
-    if (newIsPlaying[index]) {
-      audioRefs.current[index].pause();
-    } else {
-      audioRefs.current[index].play();
-    }
-    newIsPlaying[index] = !newIsPlaying[index];
-    setIsPlaying(newIsPlaying);
-  };
-
-  const handleTimeUpdate = (index, e) => {
-    const progressPercentage = (e.target.currentTime / e.target.duration) * 100;
-    const newProgress = [...progress];
-    newProgress[index] = progressPercentage;
-    setProgress(newProgress);
-  };
-
   return (
     <section className={`${work_header.className} text-red uppercase pt-12 text-headers relative`}>
       <div className="relative overflow-hidden w-screen">
@@ -55,7 +34,7 @@ export default async function SingleSpeak({ params }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-screen px-0 pt-20 work_bread">
-        <div className="md:col-start-1 md:row-start-1 relative w-full pb-[100%]  overflow-hidden mt-3">
+        <div className="md:col-start-1 md:row-start-1 relative w-full pb-[100%]  overflow-hidden mt-3 bg-grey">
           <Image src={speak[0].images[0].src} alt={speak[0].images[0].alt || "Default alt text"} layout="fill" objectFit="cover" />
         </div>
 
@@ -65,7 +44,7 @@ export default async function SingleSpeak({ params }) {
         </div>
 
         {speak[0].images.slice(1).map((image, i) => (
-          <div key={i} className="relative w-full pb-[100%] overflow-hidden">
+          <div key={i} className="relative w-full pb-[100%]  overflow-hidden">
             <Image src={image.src} alt={image.alt || `Image ${i + 1}`} layout="fill" objectFit="cover" />
           </div>
         ))}

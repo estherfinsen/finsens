@@ -10,6 +10,8 @@ module.exports = {
         footer_head: ["130px", "130px"],
         footer: ["40px", "40px"],
         nav: ["230px", "230px"],
+        nav_ipad: ["140px", "140px"],
+        nav_mobile: ["80px", "80px"],
       },
 
       keyframes: {

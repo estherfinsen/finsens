@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Work_Sans } from "next/font/google";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -27,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${work_header.className} bg-blue m-0`}>
-        <header className="w-full p-2">
+        <header className="w-full">
           <Navbar />
         </header>
         <main className="w-full py-10 flex justify-center">{children}</main>

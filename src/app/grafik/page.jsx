@@ -39,13 +39,11 @@ export default async function grafik() {
           return (
             <li key={item.id} className={`group flex ${alignClass} flex-col h-[400px] w-full`}>
               <a href={`/grafik/${item.slug}`} className="block transition-opacity duration-500 group-hover:opacity-80">
-                {/* Billedcontainer */}
                 <div className="relative w-[400px] h-[400px] bg-grey overflow-hidden">
                   <Image src={dataGrafik.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].src || "/default-image.jpg"} alt={dataGrafik.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].alt || "Default alt text"} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
                 </div>
 
-                {/* Tekst */}
-                <p className="mt-2 text-breads font-bold text-left w-[300px]">{item.name}</p>
+                <p className="mt-2 text-breads font-bold w-[300px] text-left ">{item.name}</p>
               </a>
             </li>
           );

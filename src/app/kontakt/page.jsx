@@ -12,7 +12,7 @@ const work_header = Work_Sans({
 
 export default function kontakt() {
   return (
-    <section className={`${work_header.className} text-red uppercase pt-12 text-headers relative`}>
+    <section className={`${work_header.className} text-red uppercase text-headers relative`}>
       <div className="relative overflow-hidden w-screen">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
 
@@ -25,7 +25,7 @@ export default function kontakt() {
 
       <div className="md:grid md:grid-cols-2 pt-20">
         <div className="md:col-start-1 z-10 relative flex flex-col items-start ">
-          <ul className="flex flex-col items-start  gap-y-7">
+          <ul className="flex flex-col items-start  gap-y-9">
             <li>
               <Link className="hover:underline" href="https://www.facebook.com/finsens.dk">
                 <p>facebook</p>

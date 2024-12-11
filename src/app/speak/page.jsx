@@ -21,7 +21,7 @@ export default async function speak() {
   console.log(data);
 
   return (
-    <div className={`${work_header.className} text-red uppercase text-headers relative`}>
+    <div className={`${work_header.className} text-red uppercase text-headers relative mb-16`}>
       <div className="relative overflow-hidden w-screen v">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
 
@@ -38,12 +38,10 @@ export default async function speak() {
           return (
             <li key={item.id} className={`group flex ${alignClass} flex-col h-[400px] w-full`}>
               <a href={`/speak/${item.slug}`} className="block transition-opacity duration-500 group-hover:opacity-80">
-                {/* Billedcontainer */}
                 <div className="relative w-[400px] h-[400px] bg-grey overflow-hidden">
                   <Image src={dataSpeak.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].src || "/default-image.jpg"} alt={dataSpeak.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].alt || "Default alt text"} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
                 </div>
 
-                {/* Tekst */}
                 <p className="mt-2 text-breads font-bold text-left w-[300px]">{item.name}</p>
               </a>
             </li>

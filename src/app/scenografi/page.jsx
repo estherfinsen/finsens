@@ -21,7 +21,7 @@ export default async function scenografi() {
   console.log(data);
 
   return (
-    <div className={`${work_header.className} text-red uppercase text-headers relative`}>
+    <div className={`${work_header.className} text-red uppercase text-headers relative mb-16`}>
       <div className="relative overflow-hidden w-screen v">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
 

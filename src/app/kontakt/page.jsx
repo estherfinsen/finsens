@@ -48,7 +48,7 @@ export default function kontakt() {
             </li>
             <li>
               <Link className="hover:underline" href="mailto:rasmus@finsens.dk">
-                <p>rasmus@finsens.dk</p>
+                <p>rasmus@finsens.dk </p>
               </Link>
             </li>
             <li>cvr: 33319924</li>

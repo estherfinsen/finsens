@@ -33,7 +33,7 @@ const Footer = () => {
           <li>cvr: 33319924</li>
         </ul>
 
-        <ul className="flex flex-col justify-start items-end gap-5 md:gap-9 lg:gap-5 pr-1 ">
+        <ul className="flex flex-col justify-start items-end gap-7 md:gap-9 lg:gap-5 pr-1 ">
           <li>
             <Link className="hover:underline" href="https://www.facebook.com/finsens.dk">
               <p>facebook</p>

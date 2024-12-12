@@ -42,7 +42,7 @@ export default async function scenografi() {
                   <Image src={dataScenografi.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].src || "/default-image.jpg"} alt={dataScenografi.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].alt || "Default alt text"} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
                 </div>
 
-                <p className="mt-2 text-breads font-bold text-left w-[300px]">{item.name}</p>
+                <p className="mt-2 text-breads font-bold text-left w-[300px] pl-1">{item.name}</p>
               </a>
             </li>
           );

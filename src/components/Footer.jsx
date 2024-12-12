@@ -19,7 +19,7 @@ const Footer = () => {
         <p className={`${work_header.className} text-nav_mobile md:text-footer_head_ipad lg:text-footer_head`}>Finsens</p>
       </Link>
       <div className="grid grid-cols-2 pt-10 text-footer_breads_mobile md:text-footer_breads_ipad lg:text-footer">
-        <ul className="flex flex-col justify-start items-start gap-5">
+        <ul className="flex flex-col justify-start items-start gap-5 pl-1">
           <li>
             <Link className="hover:underline" href="tel:22174765">
               <p>tlf: 22 17 47 65</p>
@@ -33,7 +33,7 @@ const Footer = () => {
           <li>cvr: 33319924</li>
         </ul>
 
-        <ul className="flex flex-col justify-start items-end gap-5 md:gap-9 lg:gap-5 ">
+        <ul className="flex flex-col justify-start items-end gap-5 md:gap-9 lg:gap-5 pr-1 ">
           <li>
             <Link className="hover:underline" href="https://www.facebook.com/finsens.dk">
               <p>facebook</p>

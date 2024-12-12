@@ -22,7 +22,7 @@ export default async function scenografi() {
 
   return (
     <div className={`${work_header.className} text-red uppercase text-headers relative mb-16`}>
-      <div className="relative overflow-hidden w-screen v">
+      <div className="relative overflow-hidden w-screen">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-red"></div>
 
         <div className="relative flex animate-program-2 w-screen">
@@ -31,18 +31,19 @@ export default async function scenografi() {
 
         <div className="absolute bottom-0 left-0 w-full h-[2px] bg-red"></div>
       </div>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-20 w-screen pt-20">
+
+      <ul className="grid grid-cols-1 items-start gap-y-20 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 lg:gap-x-4 w-screen pt-20">
         {data.map((item, index) => {
-          const alignClass = index % 3 === 0 ? "items-start" : index % 3 === 1 ? "items-center" : "items-end";
+          const alignClass = index % 3 === 0 ? "md:items-start" : index % 3 === 1 ? "md:items-center" : "md:items-end";
 
           return (
             <li key={item.id} className={`group flex ${alignClass} flex-col h-[400px] w-full`}>
-              <a href={`/scenografi/${item.slug}`} className="block transition-opacity duration-500 group-hover:opacity-80">
+              <a href={`/scenografi/${item.slug}`} className="block ">
                 <div className="relative w-[400px] h-[400px] bg-grey overflow-hidden">
                   <Image src={dataScenografi.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].src || "/default-image.jpg"} alt={dataScenografi.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].alt || "Default alt text"} fill className="object-cover transition-transform-opacity duration-500 group-hover:opacity-80 group-hover:scale-110" />
                 </div>
 
-                <p className="mt-2 text-breads font-bold text-left w-[300px] pl-1">{item.name}</p>
+                <p className="mt-2 text-breads font-bold w-[300px] text-left pl-1">{item.name}</p>
               </a>
             </li>
           );

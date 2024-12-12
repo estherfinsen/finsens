@@ -32,9 +32,9 @@ export default async function grafik() {
         <div className="absolute bottom-0 left-0 w-full h-[2px] bg-red"></div>
       </div>
 
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-20 w-screen pt-20">
+      <ul className="grid grid-cols-1 items-start gap-y-20 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 lg:gap-x-4 w-screen pt-20">
         {data.map((item, index) => {
-          const alignClass = index % 3 === 0 ? "items-start" : index % 3 === 1 ? "items-center" : "items-end";
+          const alignClass = index % 3 === 0 ? "md:items-start" : index % 3 === 1 ? "md:items-center" : "md:items-end";
 
           return (
             <li key={item.id} className={`group flex ${alignClass} flex-col h-[400px] w-full`}>

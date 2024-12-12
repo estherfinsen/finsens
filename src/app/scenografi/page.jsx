@@ -39,7 +39,7 @@ export default async function scenografi() {
             <li key={item.id} className={`group flex ${alignClass} flex-col h-[400px] w-full`}>
               <a href={`/scenografi/${item.slug}`} className="block transition-opacity duration-500 group-hover:opacity-80">
                 <div className="relative w-[400px] h-[400px] bg-grey overflow-hidden">
-                  <Image src={dataScenografi.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].src || "/default-image.jpg"} alt={dataScenografi.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].alt || "Default alt text"} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <Image src={dataScenografi.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].src || "/default-image.jpg"} alt={dataScenografi.find((image) => image.id === item.id && image.images[0].name === "cover")?.images[0].alt || "Default alt text"} fill className="object-cover transition-transform-opacity duration-500 group-hover:opacity-80 group-hover:scale-110" />
                 </div>
 
                 <p className="mt-2 text-breads font-bold text-left w-[300px] pl-1">{item.name}</p>
